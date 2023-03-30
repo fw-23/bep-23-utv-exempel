@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Backend 2023</title>
 </head>
 <body>
-    <?php 
-        echo "<h1>Hello world!</h1>";
-    ?>
+    <h3>Backend-programmering 2023 (utvecklingstudier)</h3>
+    <h2>Lektionsexempel</h2>
+    
+    
+    <p>Källkoden till allt i denna katalog finns på <a href="https://github.com/fw-23/bep-23-utv-exempel">https://github.com/fw-23/bep-23-utv-exempel</a>
+</p>
+
+<ul>
+
+    <li><a href="lektion-1/">Lektion 1</a></li>
+</ul>
+    
 </body>
 </html>
