@@ -31,6 +31,7 @@ if ($hour < 12) {
     <head><title><?php echo $page_title; ?></title></head>
     <body>
         <h3><?php echo $page_title; ?></h3>
+        <div><a href="lektion-2/form.php">&raquo; PHP och formulärhantering</a></div>
         <?php 
             echo "<p>God $dygnstid, klockan är $hour:$minute
                 och det är " . $veckodagar[$dow] . ".</p>";
@@ -54,7 +55,7 @@ if ($hour < 12) {
                 echo "<li><b>$i: </b>";
                 // Inre loop ($j)
                 for ($j=1; $j<6; $j++) {
-                    echo $j+$i ." ";
+                    echo $j ." ";
                 }
                 echo "</li>";
             }
