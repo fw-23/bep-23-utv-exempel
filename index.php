@@ -17,6 +17,7 @@
 <ul>
 
     <li><a href="lektion-1/">Lektion 1</a></li>
+    <li><a href="lektion-2/">Lektion 2</a></li>
 </ul>
     
 </body>
