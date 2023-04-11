@@ -11,6 +11,9 @@ require 'config.php';
     <title><?php echo $page_title; ?></title>
 </head>
 <body>
+
+    <p><a href="session_form.php">» Session-form</a></p>
+    
     <h3><?php echo $page_title; ?></h3>
 
     <?php
