@@ -18,6 +18,7 @@
 
     <li><a href="lektion-1/">Lektion 1</a></li>
     <li><a href="lektion-2/">Lektion 2</a></li>
+    <li><a href="lektion-3/">Lektion 3</a></li>
     <li><a href="CC-tabula-rasa/">CC-tabula-rasa</a></li>
 </ul>
     
