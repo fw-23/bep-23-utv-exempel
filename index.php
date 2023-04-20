@@ -15,7 +15,7 @@
 
 <?php
 # Enkel array med heltal:
-$lektioner = [1, 2, 3, 4];
+$lektioner = [1, 2, 3, 4, 5];
 
 # Array som innehåller associativa arrays:
 $code_challenges = [
