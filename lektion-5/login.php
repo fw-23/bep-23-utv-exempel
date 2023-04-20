@@ -7,7 +7,6 @@
 
     // Om "namn" och "password" finns i $_POST (har skickats via formuläret)
     if (isset($_POST["username"]) && isset($_POST["password"])) {
-
         // Räkna ut hash av inmatat lösenord "abc123" => "3rdq3qdqdqdqd3sacfda"
         $password_hash = sha1($_POST["password"]); 
 

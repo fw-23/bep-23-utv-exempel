@@ -37,7 +37,12 @@ if (isset($_POST["logout"])) {
       <ul>
       <?php while ($row = $result->fetch_assoc()) { ?>
         
-        <li><?php echo $row['firstname'] . " " . $row['lastname']; ?> </li>
+        <li>
+          <img src="img/<?php echo $row['username']; ?>.jpg" style="max-width: 50px;">
+
+          <?php echo $row['firstname'] . " " . $row['lastname']; ?> 
+
+        </li>
 
       <?php } ?>
       </ul>
