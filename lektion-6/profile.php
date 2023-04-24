@@ -31,7 +31,34 @@ if (isset($_POST['firstname'])) {
 
 }
 
+/**
+ * LÖSENORD
+ */
+if (isset($_POST['new_password']) 
+    && strlen($_POST['new_password']) > 5 // tillräckligt långt
+    && $_POST['new_password'] == $_POST['confirm_password']) {
 
+    $stmt = $conn->prepare("
+        UPDATE users SET
+            password = ?,
+            updated_at = CURRENT_TIMESTAMP()
+        WHERE id = ? 
+        AND password = ?
+    ");
+    $stmt->bind_param("sis", 
+        sha1($_POST['new_password']), // vi sparar hashen av lösenordet 
+        $_SESSION['user']['id'], // 2 (int i)
+        sha1($_POST['current_password'])
+    );
+    $stmt->execute();
+
+    if ($stmt->affected_rows != 1) {
+        echo "Lösenordet INTE ändrat.";
+    } else {
+        echo "Lösenordet ändrat.";
+    }
+
+}
 
 /**
  * PROFILBILD
@@ -91,6 +118,18 @@ $user = $result->fetch_assoc();
             Efternamn: <input type="text" name="lastname" 
                 value="<?php echo $user['lastname']; ?>"><br>
 
+            <input type="submit" value="Spara">
+
+        </form>
+    </p>
+    <hr>
+    <p>
+        <h4>Ändra lösenord</h4>
+
+        <form method="POST">
+            <input type="password" name="current_password" placeholder="Nuvarande lösenord"><br>
+            <input type="password" name="new_password" placeholder="Nytt lösenord"><br>
+            <input type="password" name="confirm_password" placeholder="Bekräfta nytt lösenord"><br>
             <input type="submit" value="Spara">
 
         </form>
