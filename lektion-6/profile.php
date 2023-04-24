@@ -20,7 +20,7 @@ if (isset($_POST['firstname'])) {
             updated_at = CURRENT_TIMESTAMP()
         WHERE id = ?
     ");
-    $stmt->bind_param("ssi", 
+    $stmt->bind_param("ssi", // ssi = string, string, int (samma ordning som parametrarna) 
         $_POST['firstname'], // John (string s)
         $_POST['lastname'], // Doe (string s)
         $_SESSION['user']['id'] // 2 (int i)
